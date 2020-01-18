@@ -1,26 +1,60 @@
-var animals = [];
+var topics = [];
+var animate = $("<img>");
+var nonanimate = $("<img>");
 
+function topicView() {
+    var userInput = $(this).attr("creature");
+    console.log("User input: " + userInput);
+    var APIKey = "3DZNtITUTjlK4z3n8a5ecTyDtezwC3R9";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + userInput +
+        "&api_key=" + APIKey + "&limit=10";
 
-function renderButtons(){  //generates the buttons for the animals choosen
-    console.log("rendering animal buttons");
-    $("#animal-button").empty();
-    for (var i = 0; i < animals.length; i++){
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function(response) {
+        console.log(response);
+        var results = response.data;
+        for (var i = 0; i < results.length; i ++) {
+            var gifDiv = $("<div>");
+            gifDiv.addClass("gif");
+            var rating = results[i].rating;
+            var text = $("<p>").text("Rating: " + rating);
+            var gifImg = $("<img>");
+            nonanimate.attr("src", results[i].images.fixed_height_still.url);
+            gifImg.attr("src", results[i].images.fixed_height.url);
+            gifDiv.prepend(text);
+            gifDiv.append(gifImg);
+            $("#gif-info").prepend(gifDiv);
+        }
+    });
+}
+
+function renderButtons() {  //generates the buttons for the animals choosen
+    $("#topic-button").empty();
+    for (var i = 0; i < topics.length; i++){
         var a = $("<button>");
-        a.addClass("animals");
-        a.attr("data-class", animals[i]);
-        a.text(animals[i]);
-        $("#animal-button").append(a);
-        console.log(animals[i]);
+        a.addClass("topics");
+        a.attr("creature", topics[i]);
+        a.text(topics[i]);
+        $("#topic-button").append(a);
+        console.log(topics[i]);
     }
 }
 
-$(document).on(function (){
-    $("#add-animal").on("click", function (event){
-        console.log("adding animal is working");
-        event.preventDefault();
-        var creatures = $("#animal-input").val().trim();
-        animals.push(creatures);
-        renderButtons();
+$(document).ready(function () {
+    $("#add-topic").on("click", function (event){
+            event.preventDefault();
+            var beasts = $("#topic-input").val().trim();
+            console.log(beasts);
+            topics.push(beasts);
+            $("#topic-input").val("");
+            renderButtons();
     });
-    renderButtons();
+});
+$(document).on("click", ".topics", topicView);
+renderButtons();
+
+$(".gif").on("click", function (){
+
 });
