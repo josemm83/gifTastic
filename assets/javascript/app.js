@@ -19,11 +19,11 @@ function topicView() {
             var text = $("<p>").text("Rating: " + rating);
             var gifImg = $("<img>");
 
-            gifImg.attr("src", results[i].images.original_still.url);
-            gifImg.attr("data-still", results[i].images.original_still.url);
-            gifImg.attr("data-animate", results[i].images.original.url);
+            gifImg.attr("src", results[i].images.fixed_height_still.url);
+            gifImg.attr("data-still", results[i].images.fixed_height_still.url);
+            gifImg.attr("data-animate", results[i].images.fixed_height.url);
             gifImg.attr("data-state", "still");
-            gifImg.addClass("gif");
+            gifImg.attr("class", "gif");
             gifDiv.append(text);
             gifImg.append(gifImg);
             $("#gif-info").prepend(gifDiv);
