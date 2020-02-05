@@ -11,21 +11,22 @@ function topicView() {
         url: queryURL,
         method: "GET"
     }).then(function(response) {
-        console.log(response);
+        // console.log(response);
         var results = response.data;
+      console.log(results);
         for (var i = 0; i < results.length; i ++) {
             var gifDiv = $("<div>");
             var rating = results[i].rating;
             var text = $("<p>").text("Rating: " + rating);
+          gifDiv.append(text);
+          
             var gifImg = $("<img>");
-
-            gifImg.attr("src", results[i].images.fixed_height_still.url);
-            gifImg.attr("data-still", results[i].images.fixed_height_still.url);
-            gifImg.attr("data-animate", results[i].images.fixed_height.url);
+            gifImg.attr("src", results[i].images.original_still.url);
+            gifImg.attr("data-still", results[i].images.original_still.url);
+            gifImg.attr("data-animate", results[i].images.original.url);
             gifImg.attr("data-state", "still");
-            gifImg.attr("class", "gif");
-            gifDiv.append(text);
-            gifImg.append(gifImg);
+            gifImg.addClass("gif");
+            gifDiv.append(gifImg);
             $("#gif-info").prepend(gifDiv);
         }
     });
@@ -57,8 +58,9 @@ $(document).ready(function () {
 $(document).on("click", ".topics", topicView);
 renderButtons();
 
-$(".gif").on("click", function (){
+$(document).on("click", ".gif", function (){
     var state = $(this).attr("data-state");
+  console.log("state = " + state);
     if (state === "still"){
         var animateVal = $(this).attr("data-animate");
         $(this).attr("src", animateVal);
