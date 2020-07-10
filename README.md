@@ -5,10 +5,10 @@ This is a dynamic web page that populates gifs of your choice, multiple searches
 Just click on an image to animate it.
 
 ## How to use
-Click on the blank white box to get started and hit search the system will then search for any key phrase or item that you inputted.
+Click on the blank white box to get started and click on the submite button. The system will then create a button of your search for later use. You can 
+do multiple searches and each will have it's own corresponding button.
 
-A button will then be created and if you click on it, 10 gifs will appear for your enjoyment of the searched item. If you wish to search for more gifs, simply search
-for them.
+When you are ready you can click on button(s) that will load 10 gifs on the web page. If more then one button is clicked the latest gifs will be used. The others will be pushed down on the site. :computer:
 
 ## Examples
 ![Site Start](https://github.com/josemm83/gifTastic/blob/master/gifSite.jpg)
