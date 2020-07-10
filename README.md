@@ -9,3 +9,11 @@ Click on the blank white box to get started and hit search the system will then 
 
 A button will then be created and if you click on it, 10 gifs will appear for your enjoyment of the searched item. If you wish to search for more gifs, simply search
 for them.
+
+## Examples
+![Site Start](https://github.com/josemm83/gifTastic/blob/master/gifSite.jpg)
+![First search](https://github.com/josemm83/gifTastic/blob/master/gifSite2.jpg)
+![Button created](https://github.com/josemm83/gifTastic/blob/master/gifSite3.jpg)
+![Button presssed](https://github.com/josemm83/gifTastic/blob/master/gifSite4.jpg)
+![Second example of button](https://github.com/josemm83/gifTastic/blob/master/gifSite5.jpg)
+![Second search](https://github.com/josemm83/gifTastic/blob/master/gifSite6.jpg)
