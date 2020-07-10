@@ -15,5 +15,12 @@ for them.
 ![First search](https://github.com/josemm83/gifTastic/blob/master/gifSite2.jpg)
 ![Button created](https://github.com/josemm83/gifTastic/blob/master/gifSite3.jpg)
 ![Button presssed](https://github.com/josemm83/gifTastic/blob/master/gifSite4.jpg)
-![Second example of button](https://github.com/josemm83/gifTastic/blob/master/gifSite5.jpg)
+![Second example of button](https://github.com/josemm83/gifTastic/blob/master/gifsite5.jpg)
 ![Second search](https://github.com/josemm83/gifTastic/blob/master/gifSite6.jpg)
+![Second search button pressed](https://github.com/josemm83/gifTastic/blob/master/gifSite7.jpg)
+
+## Technologies used
+- giphy API
+- javascript
+- css
+- html
