@@ -2,7 +2,6 @@ var topics = [];
 
 function topicView() {
   var userInput = $(this).attr("creature");
-  // console.log("User input: " + userInput);
   var APIKey = "3DZNtITUTjlK4z3n8a5ecTyDtezwC3R9";
   var queryURL =
     "https://api.giphy.com/v1/gifs/search?q=" +
@@ -15,7 +14,6 @@ function topicView() {
     url: queryURL,
     method: "GET",
   }).then(function (response) {
-    // console.log(response);
     var results = response.data;
     console.log(results);
     for (var i = 0; i < results.length; i++) {
@@ -53,7 +51,6 @@ $(document).ready(function () {
   $("#add-topic").on("click", function (event) {
     event.preventDefault();
     var beasts = $("#topic-input").val().trim();
-    // console.log(beasts);
     topics.push(beasts);
     $("#topic-input").val("");
     renderButtons();
