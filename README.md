@@ -9,7 +9,7 @@ do multiple searches and each will have it's own corresponding button.
 
 When you are ready you can click on button(s) that will load 10 gifs on the web page. If more then one button is clicked the latest gifs will be used. The others will be pushed 
 down on the site. The gifs won't be animated when the page loads, but if you click on the corresponding image it will animate.  To stop it just click on the image
-again.:computer:
+again.  :computer:
 
 ## Examples
 ![Site Start](https://github.com/josemm83/gifTastic/blob/master/gifSite.jpg)
