@@ -22,6 +22,6 @@ again.  :computer:
 
 ## Technologies used
 - giphy API
-- javascript
-- css
-- html
+- Javascript
+- CSS
+- HTML
